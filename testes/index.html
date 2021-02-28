@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .balao {
+        background-color: red;
+        color: #ffffff;
+        font-size: 18px;
+        display: inline-block;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .balao::after {
+        content: '';
+        display: block;
+        position: absolute;
+        margin-top: 20px;
+        left: 50px;
+        border: 20px solid;
+        border-color:  red transparent transparent transparent;
+    }
+
+    table {
+        margin-top: 50px;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+    th {
+        background-color: lightgray;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: lightgreen;
+    }
+
+    .selo {
+        background-color: blueviolet;
+        padding: 4px;
+        position: fixed;
+        top: 37px;
+        right: -91px;
+        transform: rotate(45deg);
+        width: 300px;
+        text-align: center;
+        box-shadow: 0px 0px 7px;
+    }
+
+    .selo a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        border-bottom: 1px solid;
+        padding-bottom: 12px;
+        border-top: 1px solid;
+        padding-top: 12px;
+        display: block;
+    }
+
+</style>
+<body>
+    
+    <div class="balao">
+        You know nothing, Jon Snow
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Major</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1001</td>
+                <td>Joy Sen</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>Joy Sen</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>Joy Sen</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>Joy Sen</td>
+                <td>Physics</td>
+            </tr>
+            <tr>
+                <td>1001</td>
+                <td>Joy Sen</td>
+                <td>Physics</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="selo">
+        <a href="/">Selo de qualidade</a>
+    </div>
+</body>
+</html>

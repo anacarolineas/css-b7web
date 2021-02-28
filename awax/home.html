@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Awax</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header_logo">  
+                <div class="logo_img"></div>             
+            </div>
+            <nav class="header_menu">
+                <ul>
+                    <li class="active"><a href="#">Home</li></a>
+                    <li><a href="#">About Us</li></a>
+                    <li><a href="#">Services</li></a>
+                    <li><a href="#">Our Projects</li></a>
+                    <li><a href="#">Our Team</li></a>
+                    <li><a href="#">Happy Clients</li></a>
+                    <li><a href="#">Price</li></a>
+                    <li><a href="#">Some Facts</li></a>
+                    <li><a href="#">Contact Us</li> </a>                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="banner">
+            <div class="sliders">
+                <div class="slide">
+                    <div class="slide_info">
+                        <h1>Design is about<br>
+                            <span>Communication</span>
+                        </h1>
+                        <h4>Call us: +00 0 1234 5678</h4>
+                        <a href="#">Get in Touch!</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_info">
+                        <h1>Design is about<br>
+                            <span>Text</span>
+                        </h1>
+                        <h4>Call us: +00 0 1234 5678</h4>
+                        <a href="#">Get in Touch!</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_info">
+                        <h1>Design is about<br>
+                            <span>Três</span>
+                        </h1>
+                        <h4>Call us: +00 0 1234 5678</h4>
+                        <a href="#">Get in Touch!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sliders_dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    window.onload = function() {
+
+        const allDots = document.querySelectorAll(".sliders_dots .dot");
+
+        allDots.forEach((element, index) => {
+            element.addEventListener("click", function() {
+                const indexEl = parseInt(`${index}`);
+
+                if(!element.classList.contains("active")) {                             
+                    allDots.forEach(element => {
+                        if(element.classList.contains("active")) {
+                            element.classList.remove("active");
+                        }
+                    });
+                    
+                    element.classList.add("active"); 
+                    const calc = (indexEl * 100);
+
+                    const firstSlide = document.querySelector(".banner .sliders .slide");
+
+                    firstSlide.style.marginLeft = `-${calc}vw`;
+
+                }
+            });
+        });;
+        
+    }
+</script>
+</html>
