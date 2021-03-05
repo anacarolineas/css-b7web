@@ -236,6 +236,14 @@ header .container {
     color: #ffffff;
 }
 
+.default.light {
+    background-color: #f7f7f7;
+}
+
+.default.light .section-title {
+    color: #000;
+}
+
 
 
 .section-services {
@@ -276,4 +284,136 @@ header .container {
     font-size: 14px;
     color: #ccc; 
 }
+
+.section-projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-projetos-menu {
+    background-color: #ededed;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.section-projetos-menu ul {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.section-projetos-menu ul li {
+    border-right: 1px solid #ccc;
+    padding: 15px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-bottom: 5px solid #ededed;
+    cursor: pointer;
+}
+
+.section-projetos-menu ul li:last-child {
+    border-right: none;
+}
+
+.section-projetos-menu ul li a {
+    color: #333;
+    display: block;
+}
+
+.section-projetos-menu ul li:hover,
+.section-projetos-menu ul li.active {
+    border-bottom: 5px solid #b28756;
+}
+
+
+.section-projetos-list {
+    width: 100wh; /* utiliza todo o tamanho caso tela for menor que 1140px */
+    max-width: 1140px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-projetos-photo {
+    width: 280px;
+}
+
+.section-projetos-photoarea {
+    width: 260px;
+    height: 160px;
+    margin: 10px;
+}
+
+.section-projetos-photoarea img {
+    width: inherit;
+    height: inherit;
+}
+
+.section-projetos-photoinfo {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    transition: 500ms;
+    cursor: default;
+}
+
+.section-projetos-photo:hover .section-projetos-photoinfo {
+    display: flex;
+}
+
+.section-projetos-photoinfo h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.section-projetos-photoinfo p {
+    margin-top: 10px;
+}
+
+.section-fundo {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bg-team {
+    background-image: url(../media/foto6.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.section-team {
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+
+.section-team .sliders {
+    display: flex;
+}
+
+.section-team .slide {
+    width: 280px;
+    height: 300px;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-right: 20px;
+}
+
+
+
+
 
